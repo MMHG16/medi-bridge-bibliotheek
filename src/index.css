@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-paper: #f4f1ed;
+    --color-paper-light: #faf8f5;
+    --color-teal: #3d8c87;
+    --color-teal-light: #e8f3f2;
+    --color-teal-dark: #2a6b67;
+    --color-sage: #7aac6e;
+    --color-sage-light: #edf5eb;
+    --color-ink: #1c1917;
+    --color-ink-secondary: #5a5550;
+    --color-ink-tertiary: #8a827a;
+    --color-border: #e5e1dc;
+    --color-border-subtle: #eeeae5;
+    --color-white: #ffffff;
+    --color-panel: #faf8f5;
+
+    --tag-red: #c25e5e;
+    --tag-red-bg: #fdf0f0;
+    --tag-orange: #c2893d;
+    --tag-orange-bg: #fdf5ec;
+    --tag-yellow: #b8963a;
+    --tag-yellow-bg: #fcf8ec;
+    --tag-green: #5e9e6e;
+    --tag-green-bg: #eef5f0;
+    --tag-teal: #3d8c87;
+    --tag-teal-bg: #e8f3f2;
+    --tag-blue: #5a7fb5;
+    --tag-blue-bg: #edf1f8;
+    --tag-purple: #8a6ab5;
+    --tag-purple-bg: #f3eef8;
+    --tag-pink: #b56a8a;
+    --tag-pink-bg: #f8eef3;
+
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+    --background: 30 20% 96%;
+    --foreground: 20 6% 10%;
+    --card: 30 33% 98%;
+    --card-foreground: 20 6% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 6% 10%;
+    --primary: 174 40% 39%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 20% 93%;
+    --secondary-foreground: 20 6% 10%;
+    --muted: 30 15% 93%;
+    --muted-foreground: 20 6% 50%;
+    --accent: 174 40% 39%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 50% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 12% 88%;
+    --input: 30 12% 88%;
+    --ring: 174 40% 39%;
+    --radius: 0.625rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(61, 140, 135, 0.3);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(61, 140, 135, 0.5);
+  }
+}
+
+@layer components {
+  .tag-red { background-color: var(--tag-red-bg); color: var(--tag-red); }
+  .tag-orange { background-color: var(--tag-orange-bg); color: var(--tag-orange); }
+  .tag-yellow { background-color: var(--tag-yellow-bg); color: var(--tag-yellow); }
+  .tag-green { background-color: var(--tag-green-bg); color: var(--tag-green); }
+  .tag-teal { background-color: var(--tag-teal-bg); color: var(--tag-teal); }
+  .tag-blue { background-color: var(--tag-blue-bg); color: var(--tag-blue); }
+  .tag-purple { background-color: var(--tag-purple-bg); color: var(--tag-purple); }
+  .tag-pink { background-color: var(--tag-pink-bg); color: var(--tag-pink); }
+}
+
+@layer utilities {
+  .transition-expo {
+    transition-timing-function: var(--ease-out-expo);
+  }
+}
